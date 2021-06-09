@@ -1,0 +1,35 @@
+server:
+  port: 8888
+  tomcat:
+    accept-count: 1000
+    max-threads: 800
+    min-spare-threads: 100
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+spring:
+  datasource:
+    name: seckill
+    url: jdbc:mysql://localhost:3306/liangyy_seckill?serverTimezone=Asia/Shanghai
+    username: root
+    password: root222
+    type: com.alibaba.druid.pool.DruidDataSource  # 使用druid数据源
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+
+  # 配置springboot对redis的配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 10
+    # 设置jedis连接池
+    jedis:
+      pool:
+        max-active: 50
+        min-idle: 20
+mq:
+  nameserver:
+    addr: 127.0.0.1:9876
+  topicname: stock
