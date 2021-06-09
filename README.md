@@ -13,8 +13,8 @@
 ##### 2.4 nginx lua缓存
 ### 三、交易性能优化（缓存库存）
 #### 1、 交易性能瓶颈
-
 下单流程图：
+
 ![](https://gitee.com/liangsir-67/imagerepo/raw/master/img/20210526094520.png)
 
 #### 2、 交易验证优化
