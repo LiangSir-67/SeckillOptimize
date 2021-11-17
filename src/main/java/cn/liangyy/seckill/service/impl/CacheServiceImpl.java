@@ -18,7 +18,9 @@ public class CacheServiceImpl implements CacheService {
 
     private Cache<String,Object> commonCache = null;
 
-    // 在bean加载的时候，优先加载init方法
+    /**
+     * 在bean加载的时候，优先加载init方法
+     */
     @PostConstruct
     public void init(){
         commonCache = CacheBuilder.newBuilder()
