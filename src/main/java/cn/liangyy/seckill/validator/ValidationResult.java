@@ -18,14 +18,17 @@ public class ValidationResult {
     // 校验结果是否有错
     private boolean hasErrors = false;
 
-    // 存放错误信息的map
+    /* 存放错误信息的map */
     private Map<String, String> errorMsgMap = new HashMap<>();
 
     public boolean isHasErrors() {
         return hasErrors;
     }
 
-    // 实现通用的通过格式化字符串信息获取错误结果的msg方法
+    /**
+     * https://gitee.com/liangsir-67/seckill-optimize.git
+     * @return
+     */
     public String getErrorMsg() {
         return StringUtils.join(errorMsgMap.values().toArray());
     }
