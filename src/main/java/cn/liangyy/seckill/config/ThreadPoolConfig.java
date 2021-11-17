@@ -4,7 +4,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+
+import static java.util.concurrent.Executors.newFixedThreadPool;
 
 /**
  * 数据收集配置，主要作用在于Spring启动时自动加载一个ExecutorService对象
@@ -18,6 +19,6 @@ public class ThreadPoolConfig {
 
     @Bean
     public ExecutorService getThreadPool(){
-        return Executors.newFixedThreadPool(20);
+        return newFixedThreadPool(20);
     }
 }

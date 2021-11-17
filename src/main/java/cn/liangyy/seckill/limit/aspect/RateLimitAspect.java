@@ -28,7 +28,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Aspect
 public class RateLimitAspect {
     private Logger log = LoggerFactory.getLogger(this.getClass());
-    //用来存放不同接口的RateLimiter(key为接口名称，value为RateLimiter)
+    /* 用来存放不同接口的RateLimiter(key为接口名称，value为RateLimiter) */
     private ConcurrentHashMap<String, RateLimiter> map = new ConcurrentHashMap<>();
 
     private RateLimiter rateLimiter;
